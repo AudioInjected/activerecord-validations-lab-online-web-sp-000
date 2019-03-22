@@ -8,10 +8,10 @@ class Post < ActiveRecord::Base
 
   private 
   
-  click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
+  CLICKBAIT = ["Won't Believe", "Secret", "Top [number]", "Guess"]
   
   def is_click_bait? 
-    click_bait.find do |p| 
+    CLICKBAIT.find do |p| 
       if title.include?(p)
         return 
       else
