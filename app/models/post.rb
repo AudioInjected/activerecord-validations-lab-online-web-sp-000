@@ -8,10 +8,11 @@ class Post < ActiveRecord::Base
 
   private 
   
-  CLICKBAIT = ["Won't Believe", "Secret", "Top [number]", "Guess"]
+  CLICKBAIT = /(Won't Believe)|(Secret)|(Top 0-9)|(Guess)/
   
   def is_click_bait? 
-    if !.match title
-      
+    if !CLICKBAIT.match title
+      errors.add(:title, "Not Click Bait")
+    end
   end
 end 
