@@ -11,8 +11,9 @@ class Post < ActiveRecord::Base
   CLICKBAIT = ["Won't Believe", "Secret", "Top [number]", "Guess"]
   
   def is_click_bait? 
-    binding.pry
-    CLICKBAIT.find {|p| title.include?(p)}
-    errors.add(:title, "Not Click Bait")
+    if !title.nil?
+      binding.pry
+      CLICKBAIT.find {|p| title.include?(p)}
+      errors.add(:title, "Not Click Bait")
   end
 end 
