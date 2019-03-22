@@ -16,7 +16,7 @@ def click_bait
     errors.add(:title, "Not clickbait-y")
   elsif !title.match("Top [number]")
     errors.add(:title, "Not clickbait-y")
-  elsif !title.nil? && !title.include?("Guess")
+  elsif !title.match("Guess")
     errors.add(:title, "Not clickbait-y")
   end
 end 
