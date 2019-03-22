@@ -12,6 +12,6 @@ end
   click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
   
   def is_click_bait? 
-  
+    binding.pry
   end
 end 
