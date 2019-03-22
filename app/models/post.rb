@@ -5,6 +5,13 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
 end
 
+
+class TitleValidator < ActiveModel::EachValidator 
+  def validate_each(record, attribute, value) 
+    unless value.include
+  end 
+end 
+
 =begin 
 
 class EmailValidator < ActiveModel::EachValidator
