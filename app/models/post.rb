@@ -13,6 +13,8 @@ class TitleValidator < ActiveModel::Validator
       false 
     when record.title.include("Secret")
       false 
+    when record.title.include("Top [number]")
+      false 
     when 
   end 
 end 
