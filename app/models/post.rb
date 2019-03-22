@@ -17,6 +17,7 @@ def is_click_bait?
        break 
      else 
        errors.add(:title, "Not Click Bait")
+       
     end 
   end
 end 
