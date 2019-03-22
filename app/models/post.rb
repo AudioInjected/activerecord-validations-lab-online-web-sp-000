@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   
   def is_click_bait? 
     click_bait.find do |p| 
-      if title.include?(p)} 
+      if title.include?(p)
         return 
       else
         next
