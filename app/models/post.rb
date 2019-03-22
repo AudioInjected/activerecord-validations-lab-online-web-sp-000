@@ -3,7 +3,7 @@ class TitleValidator < ActiveModel::Validator
   def validate(record) 
     case record 
     when record.title.include?("Won't Believe")
-      false 
+      record.errors[:title] << 'Needs a ClickBait Title!' 
     when record.title.include?("Secret")
       false 
     when record.title.include?("Top [number]")
