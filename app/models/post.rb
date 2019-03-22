@@ -12,7 +12,11 @@ private
 click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
 
 def is_click_bait? 
-  click_bait.each do |bait|
-     title.include?(bait) ? break : errors.add(:title, "Not Click Bait")
+  click_bait.find do |bait|
+     if title.include?(bait) 
+       break 
+     else 
+       errors.add(:title, "Not Click Bait")
     end 
+  end
 end 
