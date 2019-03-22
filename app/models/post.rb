@@ -8,7 +8,7 @@ end
 
 class TitleValidator < ActiveModel::EachValidator 
   def validate_each(record, attribute, value) 
-    if !value.split.include?("Won't Believe")
+    if !value.include?("Won't Believe") || 
   end 
 end 
 
