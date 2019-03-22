@@ -17,6 +17,7 @@ class Post < ActiveRecord::Base
       else
         next
       end
-    errors.add(:title, "Not Click Bait")
-  end
+      errors.add(:title, "Not Click Bait")
+    end
+ end
 end 
