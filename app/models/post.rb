@@ -11,6 +11,8 @@ class TitleValidator < ActiveModel::Validator
     case record 
     when record.title.include("Won't Believe")
       false 
+    when record.title.include("Secret")
+      false 
     when 
   end 
 end 
