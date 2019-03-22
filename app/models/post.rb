@@ -15,5 +15,6 @@ class Post < ActiveRecord::Base
       binding.pry
       CLICKBAIT.find {|p| title.include?(p)}
       errors.add(:title, "Not Click Bait")
+    end
   end
 end 
