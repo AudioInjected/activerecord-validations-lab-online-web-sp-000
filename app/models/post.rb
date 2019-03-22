@@ -14,5 +14,6 @@ def click_bait
     errors.add(:title, "Title not clickbait-y")
   elsif title.include?("Secret")
     errors.add(:title, "Title not clickbait-y")
+    
   end
 end 
