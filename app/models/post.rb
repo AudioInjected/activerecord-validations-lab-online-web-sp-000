@@ -11,4 +11,5 @@ private
 
 def click_bait 
   if title.include?("Wont Believe")
+    
 end 
