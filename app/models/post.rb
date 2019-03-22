@@ -11,6 +11,7 @@ class Post < ActiveRecord::Base
   click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
   
   def is_click_bait? 
-    click_bait.find {|p| title.include?(p)} ? return : false
+    click_bait.find {|p| title.include?(p)} ? return : next
+    errors.add(:title, "Not Click Bait")
   end
 end 
