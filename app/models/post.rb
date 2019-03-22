@@ -7,7 +7,7 @@ class TitleValidator < ActiveModel::Validator
     when record.title.include?("Secret")
       record.errors[:title] << 'Needs a ClickBait Title!' 
     when record.title.include?("Top [number]")
-      false 
+      record.errors[:title] << 'Needs a ClickBait Title!' 
     when record.title.include?("Guess")
       false 
     end
