@@ -7,3 +7,8 @@ class Post < ActiveRecord::Base
   validates :click_bait
 end
 
+private 
+
+def click_bait 
+  if title.include?("Wont Believe")
+end 
