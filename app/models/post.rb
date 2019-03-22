@@ -12,13 +12,5 @@ private
 click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
 
 def is_click_bait? 
-  if title.match("Won't Believe") == nil
-    errors.add(:title, "Not clickbait-y")
-  elsif !title.match("Secret")
-    errors.add(:title, "Not clickbait-y")
-  elsif !title.match("Top [number]")
-    errors.add(:title, "Not clickbait-y")
-  elsif !title.match("Guess")
-    errors.add(:title, "Not clickbait-y")
-  end
+  binding.pry
 end 
