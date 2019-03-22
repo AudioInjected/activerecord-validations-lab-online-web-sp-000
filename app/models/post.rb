@@ -9,7 +9,9 @@ end
 class TitleValidator < ActiveModel::Validator 
   def validate(record) 
     case record 
-    when record.title.include()
+    when record.title.include("Won't Believe")
+      false 
+    when 
   end 
 end 
 
