@@ -19,6 +19,6 @@ def click_bait
   elsif !title.nil? && !title.include?("Guess")
     errors.add(:title, "Not clickbait-y")
   else 
-    title.valid? = true
+    title.errors.clear
   end
 end 
