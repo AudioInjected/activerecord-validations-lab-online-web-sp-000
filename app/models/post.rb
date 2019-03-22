@@ -13,8 +13,7 @@ class Post < ActiveRecord::Base
   def is_click_bait? 
     if !title.nil?
       binding.pry
-      CLICKBAIT.none? {|p| p.include? title}
-      errors.add(:title, "Not Click Bait")
+     /(Won't Believe)|(Secret)|(Top 0-9)|(Guess)/.match title
     end
   end
 end 
