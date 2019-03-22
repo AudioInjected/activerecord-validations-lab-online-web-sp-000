@@ -11,9 +11,7 @@ class Post < ActiveRecord::Base
   CLICKBAIT = ["Won't Believe", "Secret", "Top [number]", "Guess"]
   
   def is_click_bait? 
-    if !title.nil?
-      binding.pry
-     /(Won't Believe)|(Secret)|(Top 0-9)|(Guess)/.match title
-    end
+    if !/(Won't Believe)|(Secret)|(Top 0-9)|(Guess)/.match title
+      
   end
 end 
