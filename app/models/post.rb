@@ -6,25 +6,26 @@ class Post < ActiveRecord::Base
 end
 
 
-class TitleValidator < ActiveModel::EachValidator 
-  def validate_each(record, attribute, value) 
-    if !value.include?("Won't Believe") || !value.include?("Secret") || !value.include?("Top [number]") || !value.include?("Guess")
-      false 
-    end
+class TitleValidator < ActiveModel::Validator 
+  def validate(record) 
+    case record 
+    when record.title.include()
   end 
 end 
 
 =begin 
 
-class EmailValidator < ActiveModel::EachValidator
-  def validate_each(record, attribute, value)
-    unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-      record.errors[attribute] << (options[:message] || "is not an email")
+
+class MyValidator < ActiveModel::Validator
+  def validate(record)
+    unless record.name.starts_with? 'X'
+      record.errors[:name] << 'Need a name starting with X please!'
     end
   end
 end
  
-class Person < ApplicationRecord
-  validates :email, presence: true, email: true
+class Person
+  include ActiveModel::Validations
+  validates_with MyValidator
 end
 =end
