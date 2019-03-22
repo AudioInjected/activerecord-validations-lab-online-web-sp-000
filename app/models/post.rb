@@ -7,17 +7,11 @@ class Post < ActiveRecord::Base
   validate :is_click_bait?
 end
 
-private 
-
-click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
-
-def is_click_bait? 
-  click_bait.find do |bait|
-     if title.include?(bait) 
-       break 
-     else 
-       errors.add(:title, "Not Click Bait")
-       
-    end 
+  private 
+  
+  click_bait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
+  
+  def is_click_bait? 
+  
   end
 end 
