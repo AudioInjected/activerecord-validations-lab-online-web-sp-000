@@ -15,7 +15,9 @@ class TitleValidator < ActiveModel::Validator
       false 
     when record.title.include("Top [number]")
       false 
-    when 
+    when record.title.include("Guess")
+      false 
+    end
   end 
 end 
 
