@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   
   def is_click_bait? 
     binding.pry
-    CLICKBAIT.find {|p| title.include?(p)} ? return : next
+    CLICKBAIT.find {|p| title.include?(p)}
     errors.add(:title, "Not Click Bait")
   end
 end 
