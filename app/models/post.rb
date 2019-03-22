@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
     if !title.nil?
       binding.pry
       if !CLICKBAIT.find {|p| title.include?(p)}
-        errors.add(:title, "Not Click Bait")
+      errors.add(:title, "Not Click Bait")
     end
   end
 end 
