@@ -10,13 +10,13 @@ end
 private 
 
 def click_bait 
-  if !title.include?("Wont Believe") && !title.nil?
+  if !title.nil? && !title.include?("Wont Believe")
     errors.add(:title, "Not clickbait-y")
-  elsif !title.include?("Secret") && !title.nil?
+  elsif !title.nil? && !title.include?("Secret")
     errors.add(:title, "Not clickbait-y")
-  elsif title.include?("Top [number]") && !title.nil?
+  elsif !title.nil? && title.include?("Top [number]")
     errors.add(:title, "Not clickbait-y")
-  elsif !title.include?("Guess") && !title.nil?
+  elsif !title.nil? && !title.include?("Guess")
     errors.add(:title, "Not clickbait-y")
   end
 end 
